@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////
+///  ArsenalPay payment module for OpenCart v2.3x ///
+///    Install Instructions                       ///
+///  https://www.arsenalpay.ru                    ///
+/////////////////////////////////////////////////////
+
+-------
+INSTALL
+-------
+These instructions are for a manual installation using FTP, cPanel or other web hosting Control Panel.
+
+1. Upload all folders and files to your server from the "upload" folder, place them in the web root of your website.
+
+2. Login to the OpenCart admin section and go to "Extensions > Payments".
+
+3. Find "ArsenalPay" in the list of payment methods.
+
+4. Click on "Install" and then on "Edit" to make payment module settings.
+
+- Settings -
+
+1. Fill out "Unique token", "Key" fields with your received unique token and key. 
+   If you don't have them yet, register through the form https://arsenalpay.ru/#register and 
+   ArsenalPay manager will contact you or ask for your token and key by sending us an email on pay@arsenalpay.ru
+
+2. Choose "Payment type" as `Bank cards` to activate payments with bank cards or `Mobile balance` to activate 
+   payments from mobile phone accounts.
+
+3. Your online shop will be receiving callback requests about processed payments for automatically order status change. 
+   The callbacks will being received onto the address assigned in "Callback URL" field. 
+   Callback is set to address: `http(s)://yourWebSiteAddress/index.php?route=payment/arsenalpay/ap_callback`
+
+4. You can specify IP address only from which it will be allowed to receive callback requests about payments 
+   from ArsenalPay onto your site in "Allowed IP address" field.
+
+5. Check "Frame address" to be as `https://arsenalpay.ru/payframe/pay.php`
+
+6. Set "Frame mode" as `in frame` to display payment frame inside your site. When the value is `out of frame` a payer 
+   will be redirected directly to the payment frame url. 
+
+7. "iframe display attributes". You can adjust "width", "height", "frameborder" and "scrolling" of ArsenalPay payment 
+   frame by setting iframe parameters. For instance, you can insert string in format: 
+   `width='100%' height='500' frameborder='0' scrolling='no'`. Go to html standard reference for more detailes about iframe attributes.
+
+8. "css file". You can specify CSS file to apply it to the view of payment frame by inserting css-file url.
+
+9. Set order statuses for pending, confirmed, failed, canceled transactions.
+
+10. You can set "Total" amount which must be reached in checkout total to make payment method active.
+
+11. You can set "Geo Zone" where ArsenalPay payment method will be available.
+
+12. You can enable/disable "Logs".
+
+13. Set "Status" as "Enabled".
+
+14. Set "Sort Order": the order number of ArsenalPay in the list of enabled payment methods.
+
+15. Finally, save settings by clicking on "Save".
+
+- Uninstall -
+
+1. Login to the Open Cart admin section and go to "Extensions > Payments".
+
+2. Find "Arsenal Pay" in the list of payment methods.
+
+3. Click on "Unistall".
+
+4. Delete files associated with ArsenalPay payment method from your web server.

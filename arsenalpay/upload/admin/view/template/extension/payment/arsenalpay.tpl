@@ -43,7 +43,7 @@
               <?php } ?>
             </div>
           </div>
-		      <div class="form-group">
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-src"><?php echo $entry_src; ?></label>
             <div class="col-sm-10">
               <select name="arsenalpay_src" id="input-src" class="form-control">
@@ -58,59 +58,50 @@
             </div>
           </div>
           <div class="form-group">
-			      <label class="col-sm-2 control-label" for="input-callback"><span data-toggle="tooltip" title="<?php echo $help_callback; ?>"><?php echo $entry_callback; ?></span></label>
-			      <div class="col-sm-10">
-				      <div class="input-group"><span class="input-group-addon"><i class="fa fa-link"></i></span>
-				        <input type="text" readonly value="<?php echo $callback_url; ?>" id="input-callback" class="form-control" />
-				      </div>
-			      </div>
-			    </div>
+            <label class="col-sm-2 control-label" for="input-callback"><span data-toggle="tooltip" title="<?php echo $help_callback; ?>"><?php echo $entry_callback; ?></span></label>
+            <div class="col-sm-10">
+              <div class="input-group"><span class="input-group-addon"><i class="fa fa-link"></i></span>
+                <input type="text" readonly value="<?php echo $callback_url; ?>" id="input-callback" class="form-control" />
+              </div>
+            </div>
+          </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-ip"><span data-toggle="tooltip" data-html="true" data-trigger="click" title="<?php echo htmlspecialchars($help_ip); ?>"><?php echo $entry_ip; ?></span></label>
             <div class="col-sm-10">
               <input type="text" name="arsenalpay_ip" value="<?php echo $arsenalpay_ip; ?>" placeholder="<?php echo $entry_ip; ?>" id="input-ip" class="form-control" />
             </div>
           </div>
-		      <div class="form-group required">
-			      <label class="col-sm-2 control-label" for="input-frame-url"><?php echo $entry_frame_url; ?></label>
-			      <div class="col-sm-10">
-			        <input type="text" name="arsenalpay_frame_url" value="<?php echo $arsenalpay_frame_url; ?>" placeholder="<?php echo $entry_frame_url; ?>" id="input-frame-url" class="form-control"/>
-			        <?php if ($error_frame_url) { ?>
-			        <div class="text-danger"><?php echo $error_frame_url; ?></div>
-			        <?php } ?>
-			      </div>
-		      </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label"><?php echo $entry_frame_mode; ?></label>
+          <div class="form-group required">
+            <label class="col-sm-2 control-label" for="input-frame-url"><?php echo $entry_frame_url; ?></label>
             <div class="col-sm-10">
-              <label class="radio-inline">
-                <?php if ($arsenalpay_frame_mode == "1") { ?>
-                <input type="radio" name="arsenalpay_frame_mode" value="1" checked="checked" />
-                <?php echo $text_in_frame; ?>
+              <input type="text" name="arsenalpay_frame_url" value="<?php echo $arsenalpay_frame_url; ?>" placeholder="<?php echo $entry_frame_url; ?>" id="input-frame-url" class="form-control"/>
+              <?php if ($error_frame_url) { ?>
+              <div class="text-danger"><?php echo $error_frame_url; ?></div>
+              <?php } ?>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-frame-mode"><?php echo $entry_frame_mode; ?></label>
+            <div class="col-sm-10">
+              <select name="arsenalpay_frame_mode" id="input-frame-mode" class="form-control">
+                <?php if ($arsenalpay_frame_mode) { ?>
+                <option value="1" selected="selected"><?php echo $text_in_frame; ?></option>
+                <option value="0"><?php echo $text_out_of_frame; ?></option>
                 <?php } else { ?>
-                <input type="radio" name="arsenalpay_frame_mode" value="1" />
-                <?php echo $text_in_frame; ?>
-                <?php } ?>
-              </label>
-              <label class="radio-inline">
-                <?php if ($arsenalpay_frame_mode == "0") { ?>
-                <input type="radio" name="arsenalpay_frame_mode" value="0" checked="checked" />
-                <?php echo $text_out_of_frame; ?>
-                <?php } else { ?>
-                <input type="radio" name="arsenalpay_frame_mode" value="0" />
-                <?php echo $text_out_of_frame; ?>
-                <?php } ?>
-              </label>
+                <option value="1"><?php echo $text_in_frame; ?></option>
+                <option value="0" selected="selected"><?php echo $text_out_of_frame; ?></option>
+                 <?php } ?>
+              </select>
             </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-frame-params"><span data-toggle="tooltip" data-html="true" data-trigger="click" title="<?php echo htmlspecialchars($help_frame_params); ?>"><?php echo $entry_frame_params; ?></span></label>
             <div class="col-sm-10">
               <input type="text" name="arsenalpay_frame_params" value="<?php echo $arsenalpay_frame_params; ?>" placeholder="<?php echo $entry_frame_params; ?>" id="input-frame-params" class="form-control" />
-			        <?php if ($error_frame_params) { ?>
-			       <div class="text-danger"><?php echo $error_frame_params; ?></div>
-			       <?php } ?>	
-			      </div>
+              <?php if ($error_frame_params) { ?>
+             <div class="text-danger"><?php echo $error_frame_params; ?></div>
+             <?php } ?> 
+            </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-css"><span data-toggle="tooltip" title="<?php echo $help_css; ?>"><?php echo $entry_css; ?></span></label>

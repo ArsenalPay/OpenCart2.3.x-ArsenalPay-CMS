@@ -165,8 +165,6 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
                 $data['arsenalpay_frame_mode'] = $this->request->post['arsenalpay_frame_mode'];
         } elseif ($this->config->get('arsenalpay_frame_mode')) {
                 $data['arsenalpay_frame_mode'] = $this->config->get('arsenalpay_frame_mode');
-        } else {
-                $data['arsenalpay_frame_mode'] = '1';
         }
         
         if (isset($this->request->post['arsenalpay_frame_params'])) {

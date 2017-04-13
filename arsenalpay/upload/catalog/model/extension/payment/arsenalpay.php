@@ -31,5 +31,4 @@ class ModelExtensionPaymentArsenalpay extends Model {
         
   
 }
-?>
 

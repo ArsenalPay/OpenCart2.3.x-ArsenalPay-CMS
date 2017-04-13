@@ -184,6 +184,5 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
         }
     }
 }
-?>
            
 

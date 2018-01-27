@@ -1,0 +1,34 @@
+<style>
+    #waiting-arsenalpay > img {
+        height: 50px;
+        width: 50px;
+        margin-left: -50px;
+        float: none;
+    }
+    #waiting-arsenalpay {
+        padding: 0 50%;
+        width: 100%;
+    }
+</style>
+<div id='app-widget'></div>
+<div id="waiting-arsenalpay">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTIwcHgnIGhlaWdodD0nMTIwcHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0idWlsLWRlZmF1bHQiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD48cmVjdCAgeD0nNDgnIHk9JzQwJyB3aWR0aD0nNCcgaGVpZ2h0PScyMCcgcng9JzInIHJ5PScyJyBmaWxsPScjZTE1ZjE5JyB0cmFuc2Zvcm09J3JvdGF0ZSgwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4gIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9J29wYWNpdHknIGZyb209JzEnIHRvPScwJyBkdXI9JzFzJyBiZWdpbj0nMHMnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDMwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4gIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9J29wYWNpdHknIGZyb209JzEnIHRvPScwJyBkdXI9JzFzJyBiZWdpbj0nMC4wODMzMzMzMzMzMzMzMzMzM3MnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDYwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4gIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9J29wYWNpdHknIGZyb209JzEnIHRvPScwJyBkdXI9JzFzJyBiZWdpbj0nMC4xNjY2NjY2NjY2NjY2NjY2NnMnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDkwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4gIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9J29wYWNpdHknIGZyb209JzEnIHRvPScwJyBkdXI9JzFzJyBiZWdpbj0nMC4yNXMnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDEyMCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+ICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSdvcGFjaXR5JyBmcm9tPScxJyB0bz0nMCcgZHVyPScxcycgYmVnaW49JzAuMzMzMzMzMzMzMzMzMzMzM3MnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDE1MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+ICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSdvcGFjaXR5JyBmcm9tPScxJyB0bz0nMCcgZHVyPScxcycgYmVnaW49JzAuNDE2NjY2NjY2NjY2NjY2N3MnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDE4MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+ICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSdvcGFjaXR5JyBmcm9tPScxJyB0bz0nMCcgZHVyPScxcycgYmVnaW49JzAuNXMnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDIxMCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+ICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSdvcGFjaXR5JyBmcm9tPScxJyB0bz0nMCcgZHVyPScxcycgYmVnaW49JzAuNTgzMzMzMzMzMzMzMzMzNHMnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDI0MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+ICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSdvcGFjaXR5JyBmcm9tPScxJyB0bz0nMCcgZHVyPScxcycgYmVnaW49JzAuNjY2NjY2NjY2NjY2NjY2NnMnIHJlcGVhdENvdW50PSdpbmRlZmluaXRlJy8+PC9yZWN0PjxyZWN0ICB4PSc0OCcgeT0nNDAnIHdpZHRoPSc0JyBoZWlnaHQ9JzIwJyByeD0nMicgcnk9JzInIGZpbGw9JyNlMTVmMTknIHRyYW5zZm9ybT0ncm90YXRlKDI3MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+ICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSdvcGFjaXR5JyBmcm9tPScxJyB0bz0nMCcgZHVyPScxcycgYmVnaW49JzAuNzVzJyByZXBlYXRDb3VudD0naW5kZWZpbml0ZScvPjwvcmVjdD48cmVjdCAgeD0nNDgnIHk9JzQwJyB3aWR0aD0nNCcgaGVpZ2h0PScyMCcgcng9JzInIHJ5PScyJyBmaWxsPScjZTE1ZjE5JyB0cmFuc2Zvcm09J3JvdGF0ZSgzMDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0nb3BhY2l0eScgZnJvbT0nMScgdG89JzAnIGR1cj0nMXMnIGJlZ2luPScwLjgzMzMzMzMzMzMzMzMzMzRzJyByZXBlYXRDb3VudD0naW5kZWZpbml0ZScvPjwvcmVjdD48cmVjdCAgeD0nNDgnIHk9JzQwJyB3aWR0aD0nNCcgaGVpZ2h0PScyMCcgcng9JzInIHJ5PScyJyBmaWxsPScjZTE1ZjE5JyB0cmFuc2Zvcm09J3JvdGF0ZSgzMzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0nb3BhY2l0eScgZnJvbT0nMScgdG89JzAnIGR1cj0nMXMnIGJlZ2luPScwLjkxNjY2NjY2NjY2NjY2NjZzJyByZXBlYXRDb3VudD0naW5kZWZpbml0ZScvPjwvcmVjdD48L3N2Zz4=" alt="Загрузка">
+</div>
+<script type="text/javascript">
+    $.getScript('https://arsenalpay.ru/widget/script.js',function () {
+        $('#waiting-arsenalpay').hide();
+        var APWidget = new ArsenalpayWidget({
+            element: 'app-widget',
+            destination: "<?php echo $order_id; ?>",
+            widget: "<?php echo $widget_id; ?>",
+            amount: "<?php echo $total; ?>",
+            userId: "<?php echo $user_id; ?>",
+            nonce: "<?php echo $nonce; ?>",
+            widgetSign: "<?php echo $widget_sign; ?>"
+        });
+        APWidget.render();
+    })
+</script>
+
+
+ 

@@ -20,19 +20,15 @@ OpenCart 2.3.x ArsenalPay CMS is software development kit for fast simple and se
 5. Click on **Install** and then on **Edit** to make payment module settings.
 
 ### Settings
- - Fill out **Unique token**, **Key** fields with your received unique token and key. If you don't have them yet, register through the form https://arsenalpay.ru/#register and ArsenalPay manager will contact you or ask for your token and key by sending us an email on pay@arsenalpay.ru
- - Choose **Payment type** as `Bank cards` to activate payments with bank cards or `Mobile balance` to activate payments from mobile phone accounts.
+ - Fill out **Widget id**, **Widget key**, **Callback key** fields with your received from Arsenalpay.
  - Your online shop will be receiving callback requests about processed payments for automatically order status change. The callbacks will being received onto the address assigned in **Callback URL** field. Callback is set to address: `http(s)://yourWebSiteAddress/index.php?route=extension/payment/arsenalpay/ap_callback`
  - You can specify IP address only from which it will be allowed to receive callback requests about payments from ArsenalPay onto your site in **Allowed IP address** field.
- - Check **Frame address** to be as `https://arsenalpay.ru/payframe/pay.php` 
- - Set **Frame mode** as `in frame` to display payment frame inside your site. When the value is `out of frame` a payer will be redirected directly to the payment frame url. 
- - **iframe display attributes**. You can adjust **width**, **height**, **frameborder** and **scrolling** of ArsenalPay payment frame by setting iframe parameters. For instance, you can insert string in format: `width='100%' height='500' frameborder='0' scrolling='no'`. Go to html standard reference for more details about iframe attributes.
- - **css file**. You can specify CSS file to apply it to the view of payment frame by inserting css-file url.
- - Set order statuses for pending, confirmed, failed, canceled transactions.
+ - Set order statuses for pending, confirmed, failed, canceled, refunded, reversed, hold transactions.
  - You can set **Total** amount which must be reached in checkout total to make payment method active.
  - You can set **Geo Zone** where ArsenalPay payment method will be available.
  - You can enable/disable **Logs**.
  - Set **Status** as **Enabled**.
+ - Set **Currency code** as **RUB**, if you have not that select, add it at **System > Localisation > Currencies** .
  - Set **Sort Order**: the order number of ArsenalPay in the list of enabled payment methods.
  - Finally, save settings by clicking on **Save**.
 
@@ -70,19 +66,15 @@ After successful installation and proper settings new choice of payment method w
 5. Нажмите на **Активировать** и затем **Редактировать**, чтобы провести настройки платежного модуля.
 
 #### НАСТРОЙКА
- - Заполните поля **Уникальный токен** и **Ключ**, присвоенными Вам токеном и ключом для подписи. Если у Вас еще нет токена и ключа, то оставьте свою заявку на подключение через форму https://arsenalpay.ru/#register и менеджер ArsenalPay свяжется с Вами, либо отправьте запрос на получение токена и ключа письмом на pay@arsenalpay.ru. 
- - Установите **Тип оплаты** как `Банковские карты` для активации платежей с пластиковых карт или  как `Баланс мобильного` — платежей с аккаунтов мобильных телефонов.
+ - Заполните поля **Widget id**, **Widget key**, **Callback key**, присвоенными Вам Arsenalpay.
  - Ваш интернет-магазин будет получать уведомления о совершенных платежах. На адрес, указанный в поле **URL для обратного запроса** на подтверждение платежа, от ArsenalPay будет поступать запрос с результатом платежа для фиксирования статусов заказа в системе интернет-магазина. Обратный запрос настроен на адрес: `http(s)://адресВашегоСайта/index.php?route=extension/payment/arsenalpay/ap_callback`
+ - Установите статусы заказов на время ожидания оплаты, после подтверждения платежа, неудавшегося платежа, полного возврата платежа, частичного возврата платежа, отказа от платежа, и случая, когда средства на карте были зарезервированы, но еще не списаны.
  - Вы можете задать IP-адрес, только с которого будут разрешены обратные запросы о совершаемых платежах, в поле **Разрешенный IP-адрес**.
- - Проверьте: **Адрес фрейма** должен быть установлен как `https://arsenalpay.ru/payframe/pay.php`
- - Вы можете устанавливать **Режим отображения платежной страницы**. Значение `во фрейме` соответствует отображению фрейма внутри Вашего сайта. При значении `вне фрейма` пользователь будет перенаправляться напрямую на адрес платежной страницы.
- - **Атрибуты отображения iframe**. Вы можете подгонять ширину, высоту, границу и прокрутку платежного фрейма, задавая соответствующие значения аттрибутов iframe в формате `width='100%' height'500' frameborder='0' scrolling='no'`. За более подробной информацией о параметрах iframe обращайтесь к стандарту html.
- - Вы можете задать **Файл css** для применения к отображению платежного фрейма, указав url css-файла.
- - Установите статусы заказов на время ожидания оплаты, после подтверждения платежа, неудавшегося платежа и отказа от платежа.
  - Вы можете задать **Итого**, итоговую сумму заказа, при которой данный метод оплаты становится доступным.
  - Вы можете задать географическую зону, где будет доступен метод оплаты ArsenalPay. 
  - Вы можете включать/выключать **Логирование**.
  - Включите модуль, установив **Статус** на **Включено**.
+ - Установите **Валюту платежа** как **RUB** если в предлагаемом списке её нет, добавьте её в меню **Настройка > Локализация > Валюты** .
  - Задайте **Порядок сортировки**: укажите порядковый номер ArsenalPay в списке включенных методов оплаты.
  - Закончив, сохраните настройки нажатием на **Сохранить**.
 

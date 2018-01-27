@@ -1,52 +1,49 @@
 <?php
 // Heading
-$_['heading_title']      = 'ArsenalPay';
+$_['heading_title'] = 'ArsenalPay';
 
 // Text
-$_['text_edit'] 		 = 'Редактировать ArsenalPay';
-$_['text_payment']       = 'Оплата';
-$_['text_arsenalpay']	 = '<a href="https://arsenalpay.ru/#register" target="_blank"><img src="view/image/payment/arsenalpay.png" alt="Skrill" title="ArsenalPay" style="border: 1px solid #EEEEEE;" /></a>';
-$_['text_success']       = 'Настройки Arsenal Pay успешно обновлены!';
-$_['text_mk']            = 'Баланс мобильного';
-$_['text_card']          = 'Банковские карты';
-$_['text_in_frame']      = 'во фрейме';
-$_['text_out_of_frame']  = 'вне фрейма';
+$_['text_edit']       = 'Редактировать ArsenalPay';
+$_['text_payment']    = 'Оплата';
+$_['text_extensions'] = 'Расширения';
+$_['text_arsenalpay'] = '<a href="https://arsenalpay.ru/#register" target="_blank"><img src="view/image/payment/arsenalpay.png" alt="Skrill" title="ArsenalPay" style="border: 1px solid #EEEEEE;" /></a>';
+$_['text_success']    = 'Настройки Arsenal Pay успешно обновлены!';
 
 // Entry
-$_['entry_merchant'] = 'Уникальный токен';
-$_['entry_key'] = 'Ключ';
-$_['entry_ip'] = 'Разрешенный IP-адрес';
-$_['entry_callback'] = 'URL для обратного запроса';
-$_['entry_frame_url'] = 'Адрес фрейма';
-$_['entry_frame_mode'] = 'Режим отображения платежной страницы';
-$_['entry_src'] = 'Тип оплаты';
-$_['entry_css'] = 'Файл css';
-$_['entry_frame_params'] = 'Атрибуты отображения iframe';
-$_['entry_total'] = 'Итого';
-$_['entry_debug'] = 'Логирование';
-$_['entry_geo_zone'] = 'Географическая зона';
-$_['entry_status'] = 'Статус';
-$_['entry_sort_order'] = 'Порядок сортировки';
+$_['entry_callback_key']  = 'Callback key';
+$_['entry_widget_id']     = 'Widget ID';
+$_['entry_widget_key']    = 'Widget key';
+$_['entry_callback_url']  = 'URL для обратного запроса';
+$_['entry_total']         = 'Итого';
+$_['entry_debug']         = 'Логирование';
+$_['entry_geo_zone']      = 'Географическая зона';
+$_['entry_status']        = 'Статус';
+$_['entry_sort_order']    = 'Порядок сортировки';
+$_['entry_currency_code'] = 'Код валюты';
+$_['entry_ip']            = 'Разрешенный IP-адрес';
 
 $_['entry_completed_status'] = 'Статус заказа после подтверждения платежа';
-$_['entry_canceled_status'] = 'Статус заказа после отказа от платежа';
-$_['entry_failed_status'] = 'Статус заказа после неудавшегося платежа';
-$_['entry_waiting_status']='Статус заказа на время ожидания оплаты';
+$_['entry_canceled_status']  = 'Статус заказа после отмены платежа';
+$_['entry_failed_status']    = 'Статус заказа после неудавшегося платежа';
+$_['entry_checked_status']   = 'Статус заказа после проверки платежа со стороны Arsenalpay ';
+$_['entry_holden_status']    = 'Статус заказа, когда средства на карте были заморожены, но еще не списаны';
+$_['entry_refunded_status']  = 'Статус заказа после частичного возврата платежа';
+$_['entry_reversed_status']  = 'Статус заказа после полного возврата платежа';
 
 // Help
-$_['help_merchant'] = 'Присваивается предприятию для доступа к платежному фрейму.';
-$_['help_key'] = 'Для проверки подписи обратных запросов.';
-$_['help_ip'] = 'Только с которого будут разрешены обратные запросы о подтверждении платежей от ArsenalPay.';
-$_['help_callback'] = 'На проверку номера заказа и подтверждение платежа.';
-$_['help_frame_url'] = 'URL-адрес фрейма';
-$_['help_css'] = 'Адрес (URL) CSS файла.';
-$_['help_frame_params'] = 'Пары атрибут-значение разделяйте пробелом';
-$_['help_total'] = 'Итоговая сумма заказа, начиная с которой данный метод оплаты становится доступным.';
-$_['help_debug'] = '';
+$_['help_callback_key']   = 'Для проверки подписи обратных запросов.';
+$_['help_widget_id']      = 'Присваивается предприятию для доступа к платежному виджету.';
+$_['help_widget_key']     = 'Присваивается предприятию для доступа к платежному виджету.';
+$_['help_callback_url']   = 'На проверку номера заказа и подтверждение платежа.';
+$_['help_total']          = 'Итоговая сумма заказа, начиная с которой данный метод оплаты становится доступным.';
+$_['help_debug']          = '';
+$_['help_currency_code']  = 'Валюта платежа (необходимо выбрать RUB)';
+$_['help_checked_status'] = 'Проверка происходит перед осуществлением транзакции платежа';
+$_['help_ip']             = 'Только с которого будут разрешены обратные запросы о подтверждении платежей от ArsenalPay.';
+
 
 // Error
-$_['error_permission'] = 'Ошибка! У вас нет прав редактировать эти настройки!';
-$_['error_merchant'] = 'Поле <b>Уникальный токен</b> обязательно для заполнения!';
-$_['error_key'] = 'Поле <b>Ключ</b> обязательно для заполнения!';
-$_['error_frame_url'] = 'Поле <b>Адрес фрейма</b> не может быть пусто!';
-$_['error_frame_params'] = "Ошибка в заданных атрибутах iframe!";
+$_['error_permission']   = 'Ошибка! У вас нет прав редактировать эти настройки!';
+$_['entry_callback_key'] = 'Поле <b>Callback key</b> обязательно для заполнения!';
+$_['entry_widget_id']    = 'Поле <b>Widget ID</b> обязательно для заполнения!';
+$_['entry_widget_key']   = 'Поле <b>Widget key</b> обязательно для заполнения!';

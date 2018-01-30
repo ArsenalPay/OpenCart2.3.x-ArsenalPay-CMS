@@ -114,6 +114,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 			'arsenalpay_total',
 			'arsenalpay_geo_zone_id',
 			'arsenalpay_status',
+			'arsenalpay_checked_status_id',
 			'arsenalpay_completed_status_id',
 			'arsenalpay_failed_status_id',
 			'arsenalpay_canceled_status_id',

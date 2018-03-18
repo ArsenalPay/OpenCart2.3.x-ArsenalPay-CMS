@@ -3,13 +3,17 @@
 $_['heading_title'] = 'ArsenalPay';
 
 // Text 
-$_['text_edit']       = 'Edit ArsenalPay';
-$_['text_payment']    = 'Payment';
-$_['text_extensions'] = 'Extensions';
-$_['text_arsenalpay'] = '<a href="https://arsenalpay.ru/en/#register" target="_blank"><img src="view/image/payment/arsenalpay.png" alt="Skrill" title="ArsenalPay" style="border: 1px solid #EEEEEE;" /></a>';
-$_['text_success']    = 'Settings of ArsenalPay have been successfully updated!';
+$_['text_payment_edit']       = 'Edit ArsenalPay payment settings';
+$_['text_tax_edit']           = 'Edit ArsenalPay online checkout settings';
+$_['text_payment']            = 'Payment';
+$_['text_extensions']         = 'Extensions';
+$_['text_arsenalpay']         = '<a href="https://arsenalpay.ru/en/#register" target="_blank"><img src="view/image/payment/arsenalpay.png" alt="Skrill" title="ArsenalPay" style="border: 1px solid #EEEEEE;" /></a>';
+$_['text_arsenalpay_tax']     = 'These parameters are needed for <a href="https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj">integration with the online checkout</a>';
+$_['text_success']            = 'Settings of ArsenalPay have been successfully updated!';
+$_['text_tax_tab_header']     = 'Online checkout settings';
+$_['text_payment_tab_header'] = 'Payment settings';
 
-// Entry
+// Entry (payment tab)
 $_['entry_callback_key']  = 'Callback key';
 $_['entry_widget_id']     = 'Widget ID';
 $_['entry_widget_key']    = 'Widget key';
@@ -47,3 +51,18 @@ $_['error_permission']   = 'Error! You have no rightts to edit these settings!';
 $_['error_callback_key'] = 'Field <b>Callback key</b> required to be filled out!';
 $_['error_widget_id']    = 'Field <b>Widget ID</b> required to be filled out!';
 $_['error_widget_key']   = 'Field <b>Widget key</b> required to be filled out!';
+
+//entry(tax tab)
+$_['entry_tax_table']        = 'On the left is the tax class in your store, on the right is the tax rate in the Federal Tax Service. Match them';
+$_['entry_default_tax_rate'] = 'Default tax rate';
+$_['entry_none_tax_rate']    = 'None';
+$_['entry_vat0_tax_rate']    = 'Vat 0%';
+$_['entry_vat10_tax_rate']   = 'Vat 10%';
+$_['entry_vat18_tax_rate']   = 'Vat 18%';
+$_['entry_vat110_tax_rate']  = 'Vat 10/110';
+$_['entry_vat118_tax_rate']  = 'Vat 18/118';
+
+//Help
+$_['help_header_shop_tax_classes'] = 'Tax classes in shops';
+$_['help_header_ap_tax_rates']     = 'Tax rates in the Federal Tax Service';
+$_['help_default_tax_rate']        = 'The rate will default in the check, if the product does not have different rate.';

@@ -208,7 +208,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 		 * Необходимо учитывать значения от бонусов, налогов и т.п.
 		 * У бонусов отрицательное value
 		 */
-		$tax           = 0;
+		$total_tax     = 0;
 		$voucher       = 0;
 		$shipping      = 0;
 		$subtotal      = 0;
@@ -223,7 +223,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 		foreach ($totals as $total) {
 			switch ($total['code']) {
 				case 'tax':
-					$tax += $total['value'];
+					$total_tax += $total['value'];
 					break;
 				case 'shipping':
 					$shipping              += $total['value'];
@@ -256,7 +256,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 		/**
 		 * Бонусы размазываются по ценам всех товаров, включая доставку
 		 */
-		$additional = ($tax + $coupon + $voucher + $reward + $credit + $handling + $low_order_fee) / $subtotal;
+		$additional = ($coupon + $voucher + $reward + $credit + $handling + $low_order_fee) / $subtotal;
 
 		$total_sum = 0;
 		/**
@@ -264,16 +264,18 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 		 */
 		$iterator = 0;
 		foreach ($products as $product) {
+			$product_tax = round($product['tax'] * (1 + $additional), 2);
+			$total_tax   -= $product_tax * $product['quantity'];
 			$iterator ++;
 			/**
 			 * Последний элемент нормализует сумму
 			 */
 			if ($iterator == count($products)) {
-				$subtotal = round($order_data['total'], 2) - round($shipping * (1 + $additional), 2) - $total_sum;
+				$subtotal = round($order_data['total'], 2) - round($shipping * (1 + $additional), 2) - $total_sum - $total_tax;
 				$final    = round($subtotal / $product['quantity'], 2);
 			}
 			else {
-				$final    = round($product['price'] * (1 + $additional), 2);
+				$final    = round($product['price'] * (1 + $additional) + $product_tax, 2);
 				$subtotal = $final * $product['quantity'];
 			}
 			$total_sum += $subtotal;
@@ -281,14 +283,14 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 			$item = array(
 				'name'     => $product['name'],
 				'quantity' => floatval($product['quantity']),
-				'price'    => $this->currency->convert($final, null, $RUB),
-				'total'    => $this->currency->convert($subtotal, null, $RUB),
+				'price'    => round($this->currency->convert($final, null, $RUB), 2),
+				'total'    => round($this->currency->convert($subtotal, null, $RUB), 2),
 			);
 
 			$product_info = $this->model_catalog_product->getProduct($product["product_id"]);
-			$tax          = $this->get_arsenalpay_tax_by_shop_tax_id($product_info['tax_class_id']);
-			if (isset($tax) && strlen($tax) > 0) {
-				$item['tax'] = $tax;
+			$tax_name     = $this->get_arsenalpay_tax_by_shop_tax_id($product_info['tax_class_id']);
+			if (isset($tax_name) && strlen($tax_name) > 0) {
+				$item['tax'] = $tax_name;
 			}
 
 			$fiscal['receipt']['items'][] = $item;
@@ -296,17 +298,17 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 
 		if ($shipping > 0) {
 
-			$value         = round($shipping * (1 + $additional), 2);
+			$value         = round($shipping * (1 + $additional) + $total_tax, 2);
 			$shipping_item = array(
 				'name'     => $order_data['shipping_method'],
 				'quantity' => 1,
-				'price'    => $this->currency->convert($value, null, $RUB),
-				'total'    => $this->currency->convert($value, null, $RUB),
+				'price'    => round($this->currency->convert($value, null, $RUB), 2),
+				'total'    => round($this->currency->convert($value, null, $RUB), 2),
 			);
 
-			$tax = $this->get_arsenalpay_tax_by_shop_tax_id($shipping_tax_class_id);
-			if (isset($tax) && strlen($tax) > 0) {
-				$shipping_item['tax'] = $tax;
+			$tax_name = $this->get_arsenalpay_tax_by_shop_tax_id($shipping_tax_class_id);
+			if (isset($tax_name) && strlen($tax_name) > 0) {
+				$shipping_item['tax'] = $tax_name;
 			}
 
 			$fiscal['receipt']['items'][] = $shipping_item;

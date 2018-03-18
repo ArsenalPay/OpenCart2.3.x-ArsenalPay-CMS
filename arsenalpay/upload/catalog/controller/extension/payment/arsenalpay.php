@@ -284,7 +284,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 				'name'     => $product['name'],
 				'quantity' => floatval($product['quantity']),
 				'price'    => round($this->currency->convert($final, null, $RUB), 2),
-				'total'    => round($this->currency->convert($subtotal, null, $RUB), 2),
+				'sum'    => round($this->currency->convert($subtotal, null, $RUB), 2),
 			);
 
 			$product_info = $this->model_catalog_product->getProduct($product["product_id"]);
@@ -303,7 +303,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 				'name'     => $order_data['shipping_method'],
 				'quantity' => 1,
 				'price'    => round($this->currency->convert($value, null, $RUB), 2),
-				'total'    => round($this->currency->convert($value, null, $RUB), 2),
+				'sum'    => round($this->currency->convert($value, null, $RUB), 2),
 			);
 
 			$tax_name = $this->get_arsenalpay_tax_by_shop_tax_id($shipping_tax_class_id);

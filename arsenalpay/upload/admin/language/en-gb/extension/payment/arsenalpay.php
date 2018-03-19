@@ -56,11 +56,11 @@ $_['error_widget_key']   = 'Field <b>Widget key</b> required to be filled out!';
 $_['entry_tax_table']        = 'On the left is the tax class in your store, on the right is the tax rate in the Federal Tax Service. Match them';
 $_['entry_default_tax_rate'] = 'Default tax rate';
 $_['entry_none_tax_rate']    = 'None';
-$_['entry_vat0_tax_rate']    = 'Vat 0%';
-$_['entry_vat10_tax_rate']   = 'Vat 10%';
-$_['entry_vat18_tax_rate']   = 'Vat 18%';
-$_['entry_vat110_tax_rate']  = 'Vat 10/110';
-$_['entry_vat118_tax_rate']  = 'Vat 18/118';
+$_['entry_vat0_tax_rate']    = 'VAT 0%';
+$_['entry_vat10_tax_rate']   = 'VAT 10%';
+$_['entry_vat18_tax_rate']   = 'VAT 18%';
+$_['entry_vat110_tax_rate']  = 'VAT 10/110';
+$_['entry_vat118_tax_rate']  = 'VAT 18/118';
 
 //Help
 $_['help_header_shop_tax_classes'] = 'Tax classes in shops';

@@ -20,7 +20,7 @@ OpenCart 2.3.x ArsenalPay CMS is software development kit for fast simple and se
 5. Click on **Install** and then on **Edit** to make payment module settings.
 
 ### Settings
- - Fill out **Widget id**, **Widget key**, **Callback key** fields with your received from Arsenalpay.
+ - Fill out **widget**, **widgetKey**, **callbackKey** fields with your received from Arsenalpay.
  - Your online shop will be receiving callback requests about processed payments for automatically order status change. The callbacks will being received onto the address assigned in **Callback URL** field. Callback is set to address: `http(s)://yourWebSiteAddress/index.php?route=extension/payment/arsenalpay/ap_callback`
  - You can specify IP address only from which it will be allowed to receive callback requests about payments from ArsenalPay onto your site in **Allowed IP address** field.
  - Set order statuses for pending, confirmed, failed, canceled, refunded, reversed, hold transactions.
@@ -31,6 +31,19 @@ OpenCart 2.3.x ArsenalPay CMS is software development kit for fast simple and se
  - Set **Currency code** as **RUB**, if you have not that select, add it at **System > Localisation > Currencies** .
  - Set **Sort Order**: the order number of ArsenalPay in the list of enabled payment methods.
  - Finally, save settings by clicking on **Save**.
+
+## Settings tax rates
+Settings of tax rates is only necessary if you are connected to [online checkout](https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj). For connection, please contact our manager.
+
+If you do not already have a tax regime on your site:
+1. Set up tax classes, you can found information on the [opencart website](http://docs.opencart.com/system/localisation/tax/)
+2. Return to the settings of the payment system **Arsenalpay**
+3. Go to **Online checkout settings** tab.
+
+You need to compare taxes in your store and in the Federal Tax Service. Settings for customization:
+ - **Default tax rate** - The default tax rate will be in the check, if no other classes is specified on the product card.
+ - If you have created tax classes on the site, you will see a list of taxes: on left side tax rate in your store, on right - in the Federal Tax Service. Please compare them.
+ - Click **"Save Changes"** to complete the setup.
 
 ### How to uninstall
 1. Login to the Open Cart admin section and go to **Extensions > Extensions**.
@@ -66,7 +79,7 @@ After successful installation and proper settings new choice of payment method w
 5. Нажмите на **Активировать** и затем **Редактировать**, чтобы провести настройки платежного модуля.
 
 #### НАСТРОЙКА
- - Заполните поля **Widget id**, **Widget key**, **Callback key**, присвоенными Вам Arsenalpay.
+ - Заполните поля **widget**, **widgetKey**, **callbackKey**, присвоенными Вам Arsenalpay.
  - Ваш интернет-магазин будет получать уведомления о совершенных платежах. На адрес, указанный в поле **URL для обратного запроса** на подтверждение платежа, от ArsenalPay будет поступать запрос с результатом платежа для фиксирования статусов заказа в системе интернет-магазина. Обратный запрос настроен на адрес: `http(s)://адресВашегоСайта/index.php?route=extension/payment/arsenalpay/ap_callback`
  - Установите статусы заказов на время ожидания оплаты, после подтверждения платежа, неудавшегося платежа, полного возврата платежа, частичного возврата платежа, отказа от платежа, и случая, когда средства на карте были зарезервированы, но еще не списаны.
  - Вы можете задать IP-адрес, только с которого будут разрешены обратные запросы о совершаемых платежах, в поле **Разрешенный IP-адрес**.
@@ -77,6 +90,19 @@ After successful installation and proper settings new choice of payment method w
  - Установите **Валюту платежа** как **RUB** если в предлагаемом списке её нет, добавьте её в меню **Настройка > Локализация > Валюты** .
  - Задайте **Порядок сортировки**: укажите порядковый номер ArsenalPay в списке включенных методов оплаты.
  - Закончив, сохраните настройки нажатием на **Сохранить**.
+ 
+### Настройка налоговых ставок
+Настройка налоговых ставок необходима только если вы подключены к [онлайн кассе](https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj). Для подключения обратитесь к нашему менеджеру.
+
+Если у вас на сайте еще не включен режим налогов:
+1. Создайте налоговые классы, информацию можно найти [тут](https://www.templatemonster.com/help/ru/opencart-2-x-how-to-manage-taxes.html)
+2. Вернитесь в настройки платежной системы **Arsenalpay**
+3. Перейдите на вкладку **Настройки для интеграции с онлайн кассой**
+
+Необходимо сопоставить налоги в вашем магазине и в ФНС. Параметры для настройки:
+ - **Налоговая ставка по умолчанию** - Налоговая ставка по умолчанию будет в чеке, если в карточке товара не указана другая ставка. 
+ - Если у вас созданы налоговые ставки на сайте, то вы увидите список налогов: Слева - ставка НДС в вашем магазине, справа - в ФНС. Пожалуйста, сопоставьте их.
+ - Нажмите **"Сохранить изменения"** для завершения найстройки.
 
 #### УДАЛЕНИЕ
 1. Зайдите в администрирование OpenCart и пройдите к **Модули / Расширения > Модули / Расширения**;

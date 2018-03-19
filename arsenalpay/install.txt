@@ -19,7 +19,7 @@ These instructions are for a manual installation using FTP, cPanel or other web 
 
 - Settings -
 
-1. Fill out "Widget ID", "Widget Key", "Callback key" fields with your received unique token and key.
+1. Fill out "widget", "widgetKey", "callbackKey" fields with your received unique token and key.
    If you don't have them yet, register through the form https://arsenalpay.ru/#register and 
    ArsenalPay manager will contact you or ask for your token and key by sending us an email on pay@arsenalpay.ru
 
@@ -45,6 +45,26 @@ These instructions are for a manual installation using FTP, cPanel or other web 
 11. Set "Sort Order": the order number of ArsenalPay in the list of enabled payment methods.
 
 12. Finally, save settings by clicking on "Save".
+
+- Settings tax rates-
+
+Settings of tax rates is only necessary if you are connected to [online checkout](https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj). For connection, please contact our manager.
+
+If you do not already have a tax regime on your site:
+
+1. Set up tax classes, you can found information on the opencart website: http://docs.opencart.com/system/localisation/tax/
+
+2. Return to the settings of the payment system "Arsenalpay"
+
+3. Go to "Online checkout settings" tab.
+
+You need to compare taxes in your store and in the Federal Tax Service. Settings for customization:
+
+1. "Default tax rate" - The default tax rate will be in the check, if no other classes is specified on the product card.
+
+2. If you have created tax classes on the site, you will see a list of taxes: on left side tax rate in your store, on right - in the Federal Tax Service. Please compare them.
+
+3. Click ""Save Changes"" to complete the setup.
 
 - Uninstall -
 

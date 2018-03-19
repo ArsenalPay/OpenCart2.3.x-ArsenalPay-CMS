@@ -15,7 +15,7 @@ $_['text_payment_tab_header'] = 'Настройки оплаты';
 
 // Entry (payment tab)
 $_['entry_callback_key']  = 'callbackKey';
-$_['entry_widget_id']     = 'widgetId';
+$_['entry_widget_id']     = 'widget';
 $_['entry_widget_key']    = 'widgetKey';
 $_['entry_callback_url']  = 'URL для обратного запроса';
 $_['entry_total']         = 'Итого';

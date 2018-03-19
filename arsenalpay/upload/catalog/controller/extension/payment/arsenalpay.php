@@ -258,14 +258,19 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 		 */
 		$additional = ($coupon + $voucher + $reward + $credit + $handling + $low_order_fee) / $subtotal;
 
+		$tax_enable = $total_tax > 0 ;
 		$total_sum = 0;
 		/**
 		 * for(;;) использовать опасно
 		 */
 		$iterator = 0;
 		foreach ($products as $product) {
-			$product_tax = round($product['tax'] * (1 + $additional), 2);
-			$total_tax   -= $product_tax * $product['quantity'];
+			if ($tax_enable) {
+				$product_tax = round($product['tax'] * (1 + $additional), 2);
+				$total_tax   -= $product_tax * $product['quantity'];
+			} else {
+				$product_tax = 0;
+			}
 			$iterator ++;
 			/**
 			 * Последний элемент нормализует сумму

@@ -14,9 +14,9 @@ $_['text_tax_tab_header']     = 'Online checkout settings';
 $_['text_payment_tab_header'] = 'Payment settings';
 
 // Entry (payment tab)
-$_['entry_callback_key']  = 'Callback key';
-$_['entry_widget_id']     = 'Widget ID';
-$_['entry_widget_key']    = 'Widget key';
+$_['entry_callback_key']  = 'callbackKey';
+$_['entry_widget_id']     = 'widget';
+$_['entry_widget_key']    = 'widgetKey';
 $_['entry_callback_url']  = 'Callback URL';
 $_['entry_total']         = 'Total';
 $_['entry_debug']         = 'Logs';

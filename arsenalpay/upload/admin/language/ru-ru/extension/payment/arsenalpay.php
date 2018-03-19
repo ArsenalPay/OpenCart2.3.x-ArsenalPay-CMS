@@ -14,9 +14,9 @@ $_['text_tax_tab_header']     = 'Настройки для интеграции 
 $_['text_payment_tab_header'] = 'Настройки оплаты';
 
 // Entry (payment tab)
-$_['entry_callback_key']  = 'Callback key';
-$_['entry_widget_id']     = 'Widget ID';
-$_['entry_widget_key']    = 'Widget key';
+$_['entry_callback_key']  = 'callbackKey';
+$_['entry_widget_id']     = 'widgetId';
+$_['entry_widget_key']    = 'widgetKey';
 $_['entry_callback_url']  = 'URL для обратного запроса';
 $_['entry_total']         = 'Итого';
 $_['entry_debug']         = 'Логирование';

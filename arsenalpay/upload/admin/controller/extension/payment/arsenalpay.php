@@ -68,6 +68,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 			'help_header_shop_tax_classes',
 			'entry_default_tax_rate',
 			'help_default_tax_rate',
+			'entry_shipment_tax_rate',
 		);
 
 		foreach ($lang_params as $param) {
@@ -136,7 +137,8 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 			'arsenalpay_debug',
 			'arsenalpay_currency_code',
 			'arsenalpay_ip',
-			'arsenalpay_default_tax_rate'
+			'arsenalpay_default_tax_rate',
+			'arsenalpay_shipment_tax_rate',
 		);
 		foreach ($post_params as $param) {
 			$data[$param] = $this->get_param_value($param);

@@ -46,7 +46,7 @@ These instructions are for a manual installation using FTP, cPanel or other web 
 
 12. Finally, save settings by clicking on "Save".
 
-- Settings tax rates-
+- Settings for integration with online checkout -
 
 Settings of tax rates is only necessary if you are connected to [online checkout](https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj). For connection, please contact our manager.
 
@@ -62,9 +62,11 @@ You need to compare taxes in your store and in the Federal Tax Service. Settings
 
 1. "Default tax rate" - The default tax rate will be in the check, if no other classes is specified on the product card.
 
-2. If you have created tax classes on the site, you will see a list of taxes: on left side tax rate in your store, on right - in the Federal Tax Service. Please compare them.
+2. "Shipment tax rate"
 
-3. Click ""Save Changes"" to complete the setup.
+3. If you have created tax classes on the site, you will see a list of taxes: on left side tax rate in your store, on right - in the Federal Tax Service. Please compare them.
+
+4. Click ""Save Changes"" to complete the setup.
 
 - Uninstall -
 

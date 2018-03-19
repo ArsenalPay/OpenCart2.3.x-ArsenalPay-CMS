@@ -69,6 +69,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 
 		$KEY = $this->config->get('arsenalpay_callback_key');
 		if (!($this->check_sign($this->callback, $KEY))) {
+			$this->log("Sign error");
 			$this->exitf('ERR');
 		}
 
@@ -226,8 +227,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 					$total_tax += $total['value'];
 					break;
 				case 'shipping':
-					$shipping              += $total['value'];
-					$shipping_tax_class_id = isset($total['tax_class_id']) ? $total['tax_class_id'] : null;
+					$shipping += $total['value'];
 					break;
 				case 'sub_total':
 					$subtotal += $total['value'];
@@ -258,8 +258,8 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 		 */
 		$additional = ($coupon + $voucher + $reward + $credit + $handling + $low_order_fee) / $subtotal;
 
-		$tax_enable = $total_tax > 0 ;
-		$total_sum = 0;
+		$tax_enable = $total_tax > 0;
+		$total_sum  = 0;
 		/**
 		 * for(;;) использовать опасно
 		 */
@@ -268,7 +268,8 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 			if ($tax_enable) {
 				$product_tax = round($product['tax'] * (1 + $additional), 2);
 				$total_tax   -= $product_tax * $product['quantity'];
-			} else {
+			}
+			else {
 				$product_tax = 0;
 			}
 			$iterator ++;
@@ -289,7 +290,7 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 				'name'     => $product['name'],
 				'quantity' => floatval($product['quantity']),
 				'price'    => round($this->currency->convert($final, null, $RUB), 2),
-				'sum'    => round($this->currency->convert($subtotal, null, $RUB), 2),
+				'sum'      => round($this->currency->convert($subtotal, null, $RUB), 2),
 			);
 
 			$product_info = $this->model_catalog_product->getProduct($product["product_id"]);
@@ -308,10 +309,10 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 				'name'     => $order_data['shipping_method'],
 				'quantity' => 1,
 				'price'    => round($this->currency->convert($value, null, $RUB), 2),
-				'sum'    => round($this->currency->convert($value, null, $RUB), 2),
+				'sum'      => round($this->currency->convert($value, null, $RUB), 2),
 			);
 
-			$tax_name = $this->get_arsenalpay_tax_by_shop_tax_id($shipping_tax_class_id);
+			$tax_name = $this->config->get("arsenalpay_shipment_tax_rate");
 			if (isset($tax_name) && strlen($tax_name) > 0) {
 				$shipping_item['tax'] = $tax_name;
 			}

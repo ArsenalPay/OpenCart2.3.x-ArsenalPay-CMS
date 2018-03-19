@@ -22,6 +22,18 @@
 			</div>
 		</div>
 		<div class="form-group">
+			<label class="col-sm-2 control-label" for="tax-class-shipment">
+				<?php echo $entry_shipment_tax_rate; ?>
+			</label>
+			<div class="col-sm-10">
+				<select id="tax-class-shipment" name="arsenalpay_shipment_tax_rate" class="form-control">
+					<?php foreach ($ap_tax_rates as $ap_tax_id => $ap_tax_entry) : ?>
+					<option value="<?php echo $ap_tax_id; ?>"<?php echo $arsenalpay_shipment_tax_rate == $ap_tax_id ? ' selected' : ''; ?>><?php echo $ap_tax_entry; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
 			<label class="col-sm-2 control-label">
 				<?php echo $entry_tax_table; ?>
 			</label>

@@ -1,90 +1,75 @@
-# ArsenalPay Module for OpenCart 2.3.x CMS
-OpenCart 2.3.x ArsenalPay CMS is software development kit for fast simple and seamless integration of your OpenCart 2.3.x web site with processing server of ArsenalPay.
+# ArsenalPay: приём платежей без покупки онлайн-кассы
 
-*Arsenal Media LLC*  
-[*Arsenal Pay processing server*]( https://arsenalpay.ru/)
-
-
-*Has been tested on OpenCart 2.3.0.0 till 2.3.0.2*  
+## Version 1.1.0
+Тестировалось на версиях OpenCart 2.3.0.0 - 2.3.0.2
 *Required php >= 5.4.0*
 
-## Version
-1.1.0
-
-##### Basic feature list:  
- * Allows seamlessly integrate unified payment frame into your site.
- * New payment method ArsenalPay will appear to pay for your products and services.
- * Allows to pay using mobile commerce and bank acquiring. More methods are about to become available. Please check for updates.
- * Supports two languages (Russian, English).  
+## Описание
+ - ArsenalPay – удобный и надежный платежный сервис для бизнеса любого размера.
+ - Самые низкие тарифы.
+ - Не нужно покупать или арендовать онлайн кассу, мы создали [готовое решение](https://arsenalpay.ru/cashbox.html) для отправки фискальных чеков.
+ - Платежный виджет настраивается под цвета вашего сайта
+ - Деньги перечисляются на ваш расчетный счет ежедневно за минусом комиссии. Без каких-либо лимитов, минимальных сумм или звёздочек в договоре
  
-### How to install
-1. Upload all folders and files to your server from the **upload** folder, place them in the web root of your website.
-2. Login to the OpenCart admin section and go to **Extensions > Extensions**.
-3. Choose the extension type **Payments** in the dropdown menu.
-4. Find **ArsenalPay** in the list of payment methods.
-5. Click on **Install** and then on **Edit** to make payment module settings.
+![картинка](https://arsenalpay.ru/images/1-ArsenalPay-priem-platezhej-na-sajte-besplatnaya-onlajn-kassa.png "Прием платежей на сайте")
 
-### Settings
- - Fill out **widget**, **widgetKey**, **callbackKey** fields with your received from Arsenalpay.
- - Your online shop will be receiving callback requests about processed payments for automatically order status change. The callbacks will being received onto the address assigned in **Callback URL** field. Callback is set to address: `http(s)://yourWebSiteAddress/index.php?route=extension/payment/arsenalpay/ap_callback`
- - You can specify IP address only from which it will be allowed to receive callback requests about payments from ArsenalPay onto your site in **Allowed IP address** field.
- - Set order statuses for pending, confirmed, failed, canceled, refunded, reversed, hold transactions.
- - You can set **Total** amount which must be reached in checkout total to make payment method active.
- - You can set **Geo Zone** where ArsenalPay payment method will be available.
- - You can enable/disable **Logs**.
- - Set **Status** as **Enabled**.
- - Set **Currency code** as **RUB**, if you have not that select, add it at **System > Localisation > Currencies** .
- - Set **Sort Order**: the order number of ArsenalPay in the list of enabled payment methods.
- - Finally, save settings by clicking on **Save**.
+## Тарифы
+2,6% за успешный платеж. Снижаем комиссию при обороте свыше 1 млн. Подключение и интеграция бесплатно.
 
-### Settings for integration with online checkout
-Settings of tax rates is only necessary if you are connected to [online checkout](https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj). For connection, please contact our manager.
+Используя ArsenalPay, Вы сможете принимать онлайн платежи при помощи:
+ - банковских карт Visa, MasterCard, Maestro и Мир, выпущенных в любом банке мира
+ - баланса мобильного телефона операторов МТС, Мегафон, Билайн и Теле2
+ - различных электронных кошельков
 
-If you do not already have a tax regime on your site:
-1. Set up tax classes, you can found information on the [opencart website](http://docs.opencart.com/system/localisation/tax/)
-2. Return to the settings of the payment system **Arsenalpay**
-3. Go to **Online checkout settings** tab.
+Платежные инструменты ArsenalPay прошли самую высокую международную сертификацию – в соответствии со максимальным стандартом безопасности данных индустрии платёжных карт PCI DSS.
 
-You need to compare taxes in your store and in the Federal Tax Service. Settings for customization:
- - **Default tax rate** - The default tax rate will be in the check, if no other classes is specified on the product card.
- - **Shipment tax rate** 
- - If you have created tax classes on the site, you will see a list of taxes: on left side tax rate in your store, on right - in the Federal Tax Service. Please compare them.
- - Click **"Save Changes"** to complete the setup.
+## Онлайн касса не нужна
+Вам не нужно покупать или арендовать свою онлайн кассу – мы создали готовое решение для отправки фискальных чеков: ваш клиент оплачивает покупку в интернет магазине через платежную систему ArsenalPay. Чек отправляется на email вашего клиента, а информация о платеже через ОФД поступает в налоговую.
+![картинка](https://arsenalpay.ru/images/2-ArsenalPay-onlajn-kassa-besplatno.png "Онлайн касса бесплатно")
 
-### How to uninstall
-1. Login to the Open Cart admin section and go to **Extensions > Extensions**.
-3. Choose the extension type **Payments** in the dropdown menu.
-2. Find **Arsenal Pay** in the list of payment methods.
-3. Click on **Uninstall**.
-4. Delete files associated with ArsenalPay payment method from your web server.
+Все платежи проходят через онлайн кассу ArsenalPay. Мы выступаем как агент и отправляем чеки от имени нашего сервиса. В чеке указывается ИНН вашего ИП или юридического лица, а также все необходимые данные, в соответствии с законом 54-ФЗ.
 
-### Usage
-After successful installation and proper settings new choice of payment method with ArsenalPay will appear on your website. To make payment for an order a payer will need to:  
+Вам не придется тратить более 40 тысяч рублей в год на покупку или аренду кассы и фискального накопителя. Все затраты и задачи по ведению онлайн касс и отправке фискальных чеков лежат на ArsenalPay и включены в комиссию за эквайринг.
 
-1. Choose goods from the shop catalog.
-2. Go into the order page.
-3. Choose the ArsenalPay payment method.
-4. Check the order detailes and confirm the order.
-5. After filling out the information depending on the payment type he will receive SMS about payment confirmation or will be redirected to the page with the result of his payment.
+## Личный кабинет
+Один из основных инструментов контроля приема платежей в интернет: статистика и история платежей, фильтрация и удобный поиск, настройки, частичные и полные возвраты, подтверждение двухэтапных (зарезервированных) платежей, выставление счетов, экспорт реестров и многое другое.
+![картинка](https://arsenalpay.ru/images/3-ArsenalPay-fiskalnye-cheki-v-lichnom-kabinete.png "Удобный личный кабинет")
 
-------------------
+Чтобы вам было удобнее, мы в личный кабинет добавили онлайн чеки по каждой транзакции, будь то успешный платеж или отмена покупки. Теперь при оплате фискальный чек отправляется на email вашего клиента, а информация о платеже поступает в налоговую. Все чеки сохраняются в вашем личном кабинете, вы всегда сможете найти, посмотреть или распечатать любой чек.
 
-#### О модуле
-* Модуль платежной системы ArsenalPay для OpenCart позволяет легко встроить платежную страницу на Ваш сайт.
-* После установки модуля у Вас появится новый вариант оплаты товаров и услуг через платежную систему ArsenalPay.
-* Платежная система ArsenalPay позволяет совершать оплату с различных источников списания средств: мобильных номеров (МТС/Мегафон/Билайн/TELE2), пластиковых карт (VISA/MasterCard/Maestro). Перечень доступных источников средств постоянно пополняется. Следите за обновлениями.
-* Модуль поддерживает русский и английский языки.  
+Теперь вам не только не нужно покупать или арендовать свою онлайн кассу, но и можно пользоваться только одним личным кабинетом для контроля за платежами и онлайн чеками.
+![картинка](https://arsenalpay.ru/images/4-ArsenalPay-fiskalnye-cheki-v-vashem-mobilnom.png "Все чеки у вас в мобильном")
 
-За более подробной информацией о платежной системе ArsenalPay обращайтесь по адресу https://www.arsenalpay.ru
+## Быстрый старт
+Тем кто не хочет заниматься настройкой сайта и хочет максимально оперативно включить прием платежей, мы предоставляем сервис Быстрый старт.
 
-#### Установка
+Вы получаете полностью готовое решение для приема платежей, не нужно тратить время на интеграцию и подготовку сайта в соответствие с требованиями международных платежных систем. Полученную личную ссылку размещаете на любой странице вашего сайта и начинаете прием платежей в течение 3 дней.
+
+Нужен только ИНН вашей компании. Онлайн касса бесплатно. Покупать или арендовать кассу не нужно.
+![картинка](https://arsenalpay.ru/images/5-ArsenalPay-bystryj-start-platezhej-na-sajte-onlajn-kassa-besplatno.png "Быстрый старт")
+
+## Основные этапы подключения
+1. Установите приложение в ваш интернет магазин.
+2. [Зарегистрируйтесь](https://arsenalpay.ru/dashboard/register?step=1) у нас в сервисе
+3. Вам будет предоставлен личный кабинет, где сразу же получите все необходимые параметры для настройки приложения:
+ - идентификатор виджета (widgetId)
+- секретный ключ виджета (widgetKey)
+- секретный ключ для callback-уведомлений (callbackKey)
+4. Сообщите нам URL для callback-уведомлений из настроек вашего приложения, чтобы после успешного платежа в вашем магазине обновлялся статус заказа.
+5. Подписываем договор и приступаем к работе.
+
+![картинка](https://arsenalpay.ru/images/6-ArsenalPay-vidzhet-oplaty-v-firmennyx-cvetax-vashego-sajta.png "Виджет оплаты в ваших фирменных цветах")
+
+Подробную инструкцию по установке, настройке и использованию модуля вы можете [скачать тут](https://arsenalpay.ru/instructions/OpenCart_%D0%A1%D0%9C%D0%A1_instruction.pdf).
+
+## Установка
 1. Скопируйте файлы из папки **upload** в корень Вашего сайта, сохраняя структуру вложенности папок;
 2. Зайдите в администрирование OpenCart и пройдите к **Модули / Расширения > Модули / Расширения**;
 3. Выберите тип расширения **Оплата** в ниспадающем меню;
 4. Найдите **ArsenalPay** в списке способов оплат;
 5. Нажмите на **Активировать** и затем **Редактировать**, чтобы провести настройки платежного модуля.
 
-#### Настройка
+## Настройка
  - Заполните поля **widget**, **widgetKey**, **callbackKey**, присвоенными Вам Arsenalpay.
  - Ваш интернет-магазин будет получать уведомления о совершенных платежах. На адрес, указанный в поле **URL для обратного запроса** на подтверждение платежа, от ArsenalPay будет поступать запрос с результатом платежа для фиксирования статусов заказа в системе интернет-магазина. Обратный запрос настроен на адрес: `http(s)://адресВашегоСайта/index.php?route=extension/payment/arsenalpay/ap_callback`
  - Установите статусы заказов на время ожидания оплаты, после подтверждения платежа, неудавшегося платежа, полного возврата платежа, частичного возврата платежа, отказа от платежа, и случая, когда средства на карте были зарезервированы, но еще не списаны.
@@ -97,70 +82,24 @@ After successful installation and proper settings new choice of payment method w
  - Задайте **Порядок сортировки**: укажите порядковый номер ArsenalPay в списке включенных методов оплаты.
  - Закончив, сохраните настройки нажатием на **Сохранить**.
  
-### Настройка параметров для подключения к онлайн кассе
-Настройка налоговых ставок необходима только если вы подключены к [онлайн кассе](https://arsenalpay.ru/documentation.html#54-fz-integraciya-s-onlajn-kassoj). Для подключения обратитесь к нашему менеджеру.
-
-Если у вас на сайте еще не включен режим налогов:
-1. Создайте налоговые классы, информацию можно найти [тут](https://www.templatemonster.com/help/ru/opencart-2-x-how-to-manage-taxes.html)
-2. Вернитесь в настройки платежной системы **Arsenalpay**
-3. Перейдите на вкладку **Настройки для интеграции с онлайн кассой**
-
-Необходимо сопоставить налоги в вашем магазине и в ФНС. Параметры для настройки:
- - **Налоговая ставка по умолчанию** - Налоговая ставка по умолчанию будет в чеке, если в карточке товара не указана другая ставка. 
- - **Налоговая ставка для доставки** - Налоговая ставка для доставки (не зависит от класса налога, указанного в настройках доставки).
- - Если у вас созданы налоговые ставки на сайте, то вы увидите список налогов: Слева - ставка НДС в вашем магазине, справа - в ФНС. Пожалуйста, сопоставьте их.
- - Нажмите **"Сохранить изменения"** для завершения найстройки.
-
-#### Удаление
+## Удаление
 1. Зайдите в администрирование OpenCart и пройдите к **Модули / Расширения > Модули / Расширения**;
 2. Выберите тип расширения **Оплата** в ниспадающем меню;
 3. Найдите **ArsenalPay** в списке методов оплаты;
 4. Нажмите на **Удалить**.
 5. Удалите файлы, относящиеся к методу оплаты ArsenalPay с сервера.
 
-#### Использование
+## Использование
 После успешной установки и настройки модуля на сайте появится возможность выбора платежной системы ArsenalPay.
 Для оплаты заказа с помощью платежной системы ArsenalPay нужно:
-
 1. Выбрать из каталога товар, который нужно купить.
 2. Перейти на страницу оформления заказа (покупки).
 3. В разделе "Платежные системы" выбрать платежную систему ArsenalPay.
 4. Перейти на страницу подтверждения введенных данных и ввода источника списания средств (мобильный номер, пластиковая карта и т.д.).
 5. После ввода данных об источнике платежа, в зависимости от его типа, либо придет СМС о подтверждении платежа, либо покупатель будет перенаправлен на страницу с результатом платежа.
 
-------------------
-
-### Описание решения
-ArsenalPay – удобный и надежный платежный сервис для бизнеса любого размера. 
-
-Используя платежный модуль от ArsenalPay, вы сможете принимать онлайн-платежи от клиентов по всему миру с помощью: 
-пластиковых карт международных платёжных систем Visa и MasterCard, эмитированных в любом банке
-баланса мобильного телефона операторов МТС, Мегафон, Билайн, Ростелеком и ТЕЛЕ2
-различных электронных кошельков 
-
-#### Преимущества сервиса: 
- - [Самые низкие тарифы](https://arsenalpay.ru/tariffs.html)
- - Бесплатное подключение и обслуживание
- - Легкая интеграция
- - [Агентская схема: ежемесячные выплаты разработчикам](https://arsenalpay.ru/partnership.html)
- - Вывод средств на расчетный счет без комиссии
- - Сервис смс оповещений
- - Персональный личный кабинет
- - Круглосуточная сервисная поддержка клиентов 
-
-А ещё мы можем взять на техническую поддержку ваш сайт и создать для вас мобильные приложения для Android и iOS. 
-
-ArsenalPay – увеличить прибыль просто! 
-Мы работаем 7 дней в неделю и 24 часа в сутки. А вместе с нами множество российских и зарубежных компаний. 
-
-#### Как подключиться: 
-1. Вы скачали модуль и установили его у себя на сайте;
-2. Отправьте нам письмом ссылку на Ваш сайт на pay@arsenalpay.ru либо оставьте заявку на [сайте](https://arsenalpay.ru/#registerModal) через кнопку "Подключиться";
-3. Мы Вам вышлем коммерческие условия и технические настройки;
-4. После Вашего согласия мы отправим Вам проект договора на рассмотрение.
-5. Подписываем договор и приступаем к работе.
-
 Всегда с радостью ждем ваших писем с предложениями. 
 
-pay@arsenalpay.ru  
+pay@arsenalpay.ru 
+
 [arsenalpay.ru](https://arsenalpay.ru)

@@ -30,7 +30,6 @@ class ControllerExtensionPaymentArsenalpay extends Controller {
 			'nonce'       => $nonce,
 			'widget_sign' => $widget_sign
 		);
-		$this->cart->clear();
 
 		return $this->load->view('extension/payment/arsenalpay_widget', $data);
 	}
